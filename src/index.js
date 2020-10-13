@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 uuidv4();
 
+const session = reuire('express-session');
 
 //INICIALIZACION
 const app = express();
@@ -32,6 +33,12 @@ app.use(require('node-sass-middleware')({
 }));
 
 //MIDDLEWARES
+app.use(session({
+  secret: 'unico-reptiles-app',
+  resave: true,
+  saveUnitialized: true
+}));
+
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
