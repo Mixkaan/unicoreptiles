@@ -11,7 +11,7 @@ const session = reuire('express-session');
 
 //INICIALIZACION
 const app = express();
-app.require('./database');
+require('./database');
 
 //CONFIGS
 app.set('port', process.env.PORT || 7000);
