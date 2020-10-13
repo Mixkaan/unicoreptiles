@@ -4,7 +4,16 @@
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true
 // });
-
+const mongoose = require('mongoose');
+const URI = 'mongodb+srv://unicoreptiles:Elizabeth123@cluster0.okzuz.mongodb.net/Cluster0?retryWrites=true&w=majority';
+const connectDB = async () => {
+  await mongoose.connect(URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  console.log('conectred...');
+}
+module.exports = connectDB;
 
 //-----BASE-DE-DATOS-DESARROLLO-----//
 // const mongoose = require('mongoose');
@@ -15,13 +24,3 @@
 
 //   .then(db => console.log('Base de datos conectada'))
 //   .catch(err => console.log(err));
-
-
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://unicoreptiles:Elizabeth123@cluster0.okzuz.mongodb.net/Cluster0?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
