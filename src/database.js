@@ -5,7 +5,7 @@
 //   useUnifiedTopology: true
 // });
 const mongoose = require('mongoose');
-const URI = 'mongodb+srv://unicoreptiles:Elizabeth123@unicoreptiles.okzuz.mongodb.net/Elizabeth123?retryWrites=true&w=majority';
+const URI = 'mongodb+srv://unicoreptiles:Elizabeth123@unicoreptiles.okzuz.mongodb.net/unicoreptiles?retryWrites=true&w=majority';
 const connectDB = async () => {
   await mongoose.connect(URI, {
     useNewUrlParser: true,
