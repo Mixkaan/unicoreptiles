@@ -10,7 +10,7 @@ uuidv4();
 
 //INICIALIZACION
 const app = express();
-require('./database');
+// require('./database');
 
 //CONFIGS
 app.set('port', process.env.PORT || 7000);
