@@ -8,7 +8,8 @@ const { v4: uuidv4 } = require('uuid');
 uuidv4();
 
 const session = require('express-session');
-
+//DBdtabase
+const connectDB = require('./database');
 //INICIALIZACION
 const app = express();
 connectDB();
