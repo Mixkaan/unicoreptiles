@@ -1,0 +1,15 @@
+.calculator{
+  grid-template-columns: auto auto;
+  background-color: var(--col4);
+
+  .resultado{
+    grid-template-columns: auto auto;
+    li{
+      font-size: 1.5rem;
+    }
+    img{
+      width: 35vw;
+      height: auto;
+    }
+  }
+}

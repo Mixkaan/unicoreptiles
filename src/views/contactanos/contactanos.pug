@@ -1,0 +1,46 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Contactanos"
+  block append
+    link(rel="stylesheet", href="/styles/contactanos/contactanos.css")
+
+block main
+  br
+  section.contenido.-Menu-margen.-padd2
+
+    div.texto.-Rad.-Padd2.-Justify
+      p ¿No encontraste el bicho que buscabas?¿Quieres algún producto
+        |  en especial y no lo has encontrado? ¿tienes alguna sugerencia
+        |  o recomendacion para nosotros? !Haznoslo saber¡
+      p Mandanos un mensaje o siguenos en nuestras redes sociales para 
+        |  apoyarnos
+
+    section.-Padd2.-Flex
+
+      if succes != ''
+        h2= succes
+
+      div.redes.-Padd.-FLex.-Rad
+        div
+          a(href="").redes__enlace 
+            img(src="/icon/facebook.png", alt="").redes__icono
+          a(href="").redes__enlace 
+            img(src="/icon/instagram.png", alt="").redes__icono
+        div
+          a(href="").redes__enlace 
+            img(src="/icon/whatsapp.png", alt="").redes__icono
+          a(href="").redes__enlace 
+            img(src="/icon/youtube.png", alt="").redes__icono
+
+      div.formulario.-Padd.-Flex.-Rad
+        form(action="/enviar_email" method="POST").-Flex
+          label(for="nombre") NOMBRE
+          input(type="text" name="nombre" placeholder="Nombre" autofocus)
+          label(for="email") EMAIL
+          input(type="text" name="email" placeholder="Email")
+          label(for="telefono") TELEFONO
+          input(type="text" name="telefono" placeholder="Telefono")
+          label(for="mensaje") MENSAJE
+          textarea(name="mensaje", rows="5")
+          button.-Boton enviar

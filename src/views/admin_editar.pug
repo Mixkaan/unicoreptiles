@@ -1,0 +1,50 @@
+extends layout
+block append config
+
+  -paginaActual = "actualizar"
+  block append
+      link(rel="stylesheet", href="/styles/admin.css")
+
+block main
+
+  h1 OLV  
+  div.caja
+  form(action="/upload" method="PUT" enctype="multipart/form-data")
+    div.input
+      label(for="nombre") ANIMAL
+      input(type="text" name="nombre" value=animal.nombre placeholder="ANIMAL")
+    div.input
+      label(for="nombre") DESCRIPCION
+      input(name="descripcion" value=animal.descripcion placeholder="ESCRIBE UN A BREVE DESCRIPCION")
+    div.input
+      label(for="nombre") MORFOLOGÍA
+      input(type="text" name="fase" value=animal.fases placeholder="FASE(S)")
+    div.input
+      label(for="precio") PRECIO
+      input(type="number" name="precio" value=animal.precio placeholder="CANTIDAD(MXN)")
+    div.select
+      div
+        label(for="sexo") SEXO
+        select(name="sexo")
+          option(value="macho") Macho
+          option(value="hembra") Hembra
+          option(value="sin sexar") Sin sexar
+      div
+        label(for="edad") EDAD
+        select(name="edad")
+          option(value="cria") Cria
+          option(value="juvenil") Juvenil
+          option(value="adulto") Adulto
+      div
+        label(for="seccion") SECCIÓN
+        select(name="seccion")
+          option(value="lagartos") Lagartos
+          option(value="serpientes") Serpientes
+          option(value="tortugas") Tortugas
+          option(value="otros_ejemplares") Otros ejemplares
+    br
+    div.archivo
+      label(for="imagen") SUBIR UNA IMAGEN
+      input(type="file" name="imagen" aria-label="File browser example")
+
+    button(type='submit') AÑADIR

@@ -1,0 +1,41 @@
+extends ../layout
+block append config
+
+  -paginaActual = "subir"
+  block append
+    link(rel="stylesheet", href="/styles/admin/subir.css")
+
+block main
+
+  div.admin-nav
+    div
+      a.-boton.regresar(href="/admin") REGRESAR AL PANEL
+    div
+      a.-boton.inicio(href="/") REGRESAR AL INICIO
+
+  br
+  section.contenedor.-Padd2.-Flex
+    form(action="/subir_producto" method="POST" enctype="multipart/form-data")
+      div.carta.-Padd.-Rad
+        div.carta__input
+          label(for="nombre") NOMBRE
+          input(type="text" name="nombre" placeholder="ANIMAL")
+        div.carta__input
+          label(for="nombre") DESCRIPCION
+          textarea(name="descripcion" placeholder="ESCRIBE UN A BREVE DESCRIPCION")
+        div.carta__input
+          label(for="precio") PRECIO
+          input(type="number" name="precio" placeholder="CANTIDAD(MXN)")
+        div.select
+          label(for="seccion") SECCIÓN
+            select(name="seccion")
+              option(value="alimento") alimento
+              option(value="suplemento") suplementos
+              option(value="mantenimiento") mantenimiento
+              option(value="decoracion") decoración
+        br
+        div.archivo.-Flex
+          label(for="imagen") SUBIR UNA IMAGEN
+          input(type="file" name="imagen" aria-label="File browser example")
+        br
+        button.agregar.-boton.-Flex(type='submit') AÑADIR

@@ -1,0 +1,69 @@
+@import "../colores"
+
+body
+  background-image: url(/img/fondo/fondo-4.png)
+
+
+.contenedor
+  width: 100%
+  height: auto
+  margin: 2rem auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.carta
+  width: 250px
+  height: 350px
+  margin: 12vh 2.5rem
+  padding: 10px
+  text-align: center
+  overflow: hidden
+  background-color: $col1
+  transition: all 0.8s
+
+.animal-img
+  width: 230px
+  height: 230px
+  border: 2px solid $col3
+
+.info
+  width: 95%
+  height: 3rem
+  overflow: hidden
+  color: $colb
+  font-size: 1rem
+  font-weight: bold
+  text-transform: uppercase
+  overflow: hidden
+
+
+
+.opacidad
+  width: 252px
+  height: 350px
+  margin: -19rem -10px
+  padding: 1rem
+  position: absolute
+  background-color: $col2
+  opacity: 0
+  transition: all 0.3s
+
+.opacidad p
+  margin: 65% auto
+  transition: all 0.3s
+  background-color: $col6
+
+.carta:hover .opacidad
+  margin: -17.9rem -10px
+  transition: all 0.3s
+  opacity: 1
+
+
+
+
+.opacidad .alerta
+  background-color: red
+
+.opacidad .verMAs
+  background-color: $col6

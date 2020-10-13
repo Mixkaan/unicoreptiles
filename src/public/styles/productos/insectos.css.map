@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "insectos.css",
+	"sources": [
+		"../../sass/productos/insectos.sass"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,SAAS,AAAC,CACR,gBAAgB,CAAE,2BAA2B,CAI1B,AAFlB,AAAD,gBAAQ,AAAC,CACP,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,IAAI,CAAG"
+}

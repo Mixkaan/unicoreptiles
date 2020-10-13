@@ -1,0 +1,64 @@
+@import ../colores
+  
+.contenedor
+  background-image: url(/img/fondo/fondo-4.png)
+
+.filtro
+  height: 50vh
+  margin-right: 1rem
+  flex-direction: column
+  text-align: center
+  justify-content: space-around
+  background-color: $col7
+  animation-delay: 0.4s
+  animation-duration: 1.5s
+
+  &__boton
+    margin: 1rem 0
+    background-color: $col8
+
+.activo
+  background-color: $col4
+
+.contenido
+  width: 100%
+  flex-wrap: wrap
+  justify-content: center
+  background: $col8
+
+.carta
+  width: 12rem
+  height: 15rem
+  padding: 0.2rem
+  margin: 0.5rem 2rem
+  color: $colb
+  background-color: $col1
+  transition: all 0.4s
+
+  &:hover
+    filter: brightness(20%)
+
+  &__img
+    width: 11.5rem
+    height: 11.5rem
+
+  &__info
+    margin-top: 0.2rem
+    text-align: center
+
+
+@media screen and (max-width: 800px)
+  .contenedor
+    flex-direction: column
+
+  .filtro
+    height: 40vh
+    margin-right: 0
+    margin-bottom: 1rem
+    justify-content: center
+    animation-delay: 0.4s
+    animation-duration: 1.5s
+    flex-direction: none
+
+    &__boton
+      margin: 0.2rem 0

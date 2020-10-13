@@ -1,0 +1,17 @@
+extends ../layout
+block append config
+
+  -paginaActual = "subir"
+  block append
+    link(rel="stylesheet", href="/styles/admin/login.css")
+
+block main
+  br
+  section.login.-Menu-margen.-Flex
+    h2 INGRESAR
+    form(action="/login", method="post").carta.-Flex.-Padd2
+      input(type="text" name="username" placeholder="USUARIO").-Rad
+      br
+      input(type="password" name="password" placeholder="CONSTRASEÑA").-Rad
+      br
+      button(type="submit").-Boton ACCEDER

@@ -1,0 +1,34 @@
+extends layout
+block append config
+
+  -paginaActual = "Preventas"
+  block append
+    link(rel="stylesheet", href="/styles/preventas.css")
+
+block main
+
+  br
+  br
+  div.contenedor
+    for preventa in preventas
+      div.-borde.carta
+        h2 PREVENTA
+        br
+        br
+        div.-padding.contenido
+          img.preventa-img(src=preventa.path, alt=preventa.nombre)
+          
+          br
+          br
+          div.preventa-info
+            div.preventa-precio
+              span: img.precio-signo(src="icon/dollar.png", alt="")
+              p=preventa.precio
+            br
+            p=preventa.nombre
+            br
+            p=preventa.descripcion
+            br
+            br
+            a.-boton.apartar(href="") ¡APARTALO AHORA!
+        br 

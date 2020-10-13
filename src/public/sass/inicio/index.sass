@@ -1,0 +1,263 @@
+@import "../colores"
+
+.bann
+  justify-content: center
+  grid-template-columns: auto auto
+  background-size: cover
+  background-image: url(/img/fondo/fondo-2.png)
+
+  &__logo
+    width: 30vw
+    height: auto
+    animation-duration: 2s
+    animation-delay: 0s
+
+  &__txt
+    margin-top: 8em
+    animation-duration: 2s
+    animation-delay: 1s
+
+    h1
+      font-size: 3em
+    h3
+      font-size: 1.5em
+
+//----
+.face-perfil
+  background-color: $col1
+
+  &__plugin
+    width: 100%
+
+  &__txt
+    width: 40%
+    margin-top: 2.5rem
+    color: $colb
+    float: right
+    
+    h3
+      font-size: 2rem
+
+    iframe
+      margin-left: 3rem
+      width: 100%
+
+//----
+.instagram-plugin
+  background-image: url(/img/fondo/fondo-4.png)
+
+.pluggin
+  animation-delay: 0.4s
+
+
+//----
+.destacado
+  background-color: $col8
+
+  &__animales
+    flex-wrap: wrap
+    justify-content: space-between
+
+.carta
+  width: 250px
+  height: 350px
+  margin: 4vh 2.5rem
+  padding: 10px
+  text-align: center
+  overflow: hidden
+  background-color: $col7
+  transition: all 0.8s
+
+.animal-img
+  width: 230px
+  height: 230px
+  border: 2px solid $col5
+
+.info
+  width: 95%
+  height: 3rem
+  overflow: hidden
+  color: $colb
+  font-size: 1rem
+  font-weight: bold
+  text-transform: uppercase
+  overflow: hidden
+
+.opacidad
+  width: 250px
+  height: 350px
+  margin: -19rem -10px
+  padding: 1rem
+  position: absolute
+  background-color: $col1
+  opacity: 0
+  transition: all 0.3s
+
+  p
+    margin: 65% auto
+    padding: 0.5rem 1rem
+    transition: all 0.3s
+    background-color: $col6
+
+.carta:hover .opacidad
+  margin: -17.9rem -10px
+  transition: all 0.3s
+  opacity: 1
+
+
+//--------------------------------------------------------------------
+.veterinaria
+  grid-template-columns: auto auto
+  background-image: url(/img/fondo/fondo-3.png)
+
+  &__logo
+    width: 50vw
+
+    img
+      width: 25vw
+      margin: 0 22%
+
+  &__info
+    color: $colb
+    background-color: $col2
+
+    h2
+      font-size: 3rem    
+
+//----
+.youtube
+  background-image: url(/img/fondo/fondo-1.png)
+
+  &__txt
+    width: 100%
+    margin-bottom: 2rem
+    color: $colb
+
+  &__plugin
+    width: 80%
+    height: 70%
+    margin: 0 10%
+    animation-delay: 0.4s
+
+//----
+.grupo-whats
+  justify-content: center
+  grid-template: 
+    columns: auto auto
+    rows: auto auto
+  column-gap: 20%
+  text-align: justify
+  background-color: $col8
+
+  &__txt
+    width: 20vw
+    margin-top: 3rem
+
+  &__img
+    width: 20vw
+    height: auto
+    animation-delay: 0.4s
+
+//----
+.nosotros
+  background-image: url(/img/fondo/fondo-3.png)
+  animation-delay: 1s
+  animation-duration: 4s
+
+  &__txt
+    width: 80%
+    margin: auto
+    background-color: $colb
+    animation-delay: 0.4s
+    animation-duration: 2s
+
+
+@media screen and (max-width: 800px)
+  .bann
+    justify-content: center
+    grid-template-columns: auto
+
+    &__logo
+      width: 80vw
+      height: auto
+      margin: auto
+      animation-duration: 2s
+
+    &__txt
+      margin-top: 0em
+      animation-duration: 2s
+
+      h1
+        font-size: 3em
+      h3
+        font-size: 1.5em
+
+    
+  //----
+  .face-perfil
+    flex-wrap: wrap
+    justify-content: center
+
+    &__plugin
+      width: 100%
+      text-align: center
+
+    &__txt
+      margin-top: 2.5rem
+      float: none
+
+      .like
+        margin-left: -5rem
+
+  //----
+  .instagram-plugin
+
+  .pluggin
+
+  
+  //----
+  .destacado
+    background-color: $col8
+
+    &__animales
+      flex-wrap: wrap
+      justify-content: center
+  
+  //----
+  .youtube
+    background-image: url(/img/fondo/fondo-1.png)
+
+    &__txt
+      width: 100%
+      margin-bottom: 2rem
+      color: $colb
+
+    &__plugin
+      width: 100%
+      height: 40%
+      margin: auto
+
+
+  //----
+  .grupo-whats
+    grid-template: 
+      columns: auto
+    column-gap: 20%
+    background-color: $col6
+
+    &__txt
+      width: 100%
+      margin-top: 3rem
+      text-align: center
+
+    &__img
+      width: 70vw
+      height: auto
+      margin: 4rem auto
+
+
+  //----
+  .nosotros
+    padding: 1rem
+    &__txt
+      width: 100%

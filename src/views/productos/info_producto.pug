@@ -1,0 +1,40 @@
+extends ../layout
+block append config
+
+  -paginaActual= producto.nombre
+  block append
+    link(rel="stylesheet", href="/styles/disponible/animal-info.css")
+
+    script(src="https://js.stripe.com/v3/")
+block main
+
+  br
+  section.animal.-Menu-margen.-Padd2
+    div.carta.-Padd.-Flex.-Shadow.-Padd2
+      img.carta__img.-Borde(src=producto.path ,alt='')
+      br
+      br
+      div.carta__info
+        h2.nombre= producto.nombre
+        br
+        h4.sub PRECIO
+        p= producto.precio
+        br
+        h4= producto.descripcion
+        br
+        h4.sub CATEGORIA
+        h4= producto.seccion
+        br
+        br
+        //aqui va el boton de stripe
+        form(action='/compra/producto/'+(producto.id) method='POST')
+          script.stripe-button(
+            src='https://checkout.stripe.com/checkout.js' 
+            data-key='pk_test_vszwAbDx8zPg1AZrZn6Ec4Lr00i0d7OeHj'
+            data-amount= (producto.precio*100)
+            data-name='ÚNICO REPTILES'
+            data-description=(producto.descripcion)
+            data-image='/img/logo.png'
+            data-locale='auto'
+            data-currency='mxn'
+          )

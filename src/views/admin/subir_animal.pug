@@ -1,0 +1,68 @@
+extends ../layout
+block append config
+
+  -paginaActual = "subir"
+  block append
+    link(rel="stylesheet", href="/styles/admin/subir.css")
+
+block main
+  section.admin-nav
+    div
+      a.-boton.regresar(href="/admin") REGRESAR AL PANEL
+    div
+      a.-boton.inicio(href="/") REGRESAR AL INICIO
+
+  br
+  section.contenedor.-Padd2.-Flex
+      form(action="/subir_animal" method="POST" enctype="multipart/form-data")
+        div.carta.-Padd2.-Rad
+          div.carta__input
+            label(for="nombre") ANIMAL
+            input(type="text" name="nombre" placeholder="ANIMAL")
+          div.carta__input
+            label(for="nombre") DESCRIPCION
+            textarea(name="descripcion" placeholder="ESCRIBE UNA BREVE DESCRIPCION")
+          div.carta__input
+            label(for="nombre") MORFOLOGÍA
+            input(type="text" name="fases" placeholder="FASE(S)")
+          div.carta__input
+            label(for="precio") PRECIO
+            input(type="number" name="precio" placeholder="CANTIDAD(MXN)")
+
+          br
+          div.select
+            label(for="sexo") SEXO
+            select(name="sexo")
+              option(value="macho") Macho
+              option(value="hembra") Hembra
+              option(value="sin sexar") Sin sexar
+
+            label(for="edad") EDAD
+            select(name="edad")
+              option(value="cria") Cria
+              option(value="juvenil") Juvenil
+              option(value="adulto") Adulto
+
+            label(for="seccion") SECCIÓN
+            select(name="seccion")
+              option(value="lagartos") Lagartos
+              option(value="serpientes") Serpientes
+              option(value="tortugas") Tortugas
+            
+              option(value="") LAGARTOS
+              option(value="pogonas") pogonas
+              option(value="geckos") geckos
+              option(value="camaleones") camaleones
+              option(value="varanos") varanos
+
+              option(value="") SERPIENTES
+              option(value="pitones") pitones
+              option(value="boas") boas
+              option(value="colubridos") colubridos
+              option(value="") TORTUGAS
+          br
+          div.archivo.-Flex
+            label(for="imagen") SUBIR UNA IMAGEN
+            input(type="file" name="imagen" aria-label="File browser example")
+          br
+          button.agregar.-boton.-Flex(type='submit') AÑADIR

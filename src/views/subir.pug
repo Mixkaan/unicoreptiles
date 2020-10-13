@@ -1,0 +1,49 @@
+extends layout
+block append config
+
+  -paginaActual = "subir"
+  block append
+    link(rel="stylesheet", href="/styles/subir.css")
+
+block main
+
+  div.caja
+    form(action="/upload" method="POST" enctype="multipart/form-data")
+      div.input
+        label(for="nombre") ANIMAL
+        input(type="text" name="nombre" placeholder="ANIMAL")
+      div.input
+        label(for="nombre") DESCRIPCION
+        textarea(name="descripcion" placeholder="ESCRIBE UN A BREVE DESCRIPCION")
+      div.input
+        label(for="nombre") MORFOLOGÍA
+        input(type="text" name="fases" placeholder="FASE(S)")
+      div.input
+        label(for="precio") PRECIO
+        input(type="number" name="precio" placeholder="CANTIDAD(MXN)")
+      div.select
+        div
+          label(for="sexo") SEXO
+          select(name="sexo")
+            option(value="macho") Macho
+            option(value="hembra") Hembra
+            option(value="sin sexar") Sin sexar
+        div
+          label(for="edad") EDAD
+          select(name="edad")
+            option(value="cria") Cria
+            option(value="juvenil") Juvenil
+            option(value="adulto") Adulto
+        div
+          label(for="seccion") SECCIÓN
+          select(name="seccion")
+            option(value="lagartos") Lagartos
+            option(value="serpientes") Serpientes
+            option(value="tortugas") Tortugas
+            option(value="otros_ejemplares") Otros ejemplares
+      br
+      div.archivo
+        label(for="imagen") SUBIR UNA IMAGEN
+        input(type="file" name="imagen" aria-label="File browser example")
+
+      button(type='submit') AÑADIR

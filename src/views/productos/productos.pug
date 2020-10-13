@@ -1,0 +1,45 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Productos"
+  block append
+    link(rel="stylesheet", href="/styles/productos/productos.css")
+
+block main
+  br
+  section.contenedor.-Menu-margen.-Flex.-Padd2
+
+    div.filtro.-Flex.-Padd.-Rad2.-Shadow._.WOW.animate__animated.animate__flipInX
+
+      a(href="#", categoria="todo").filtro__boton.-Boton Todo
+      a(href="#", categoria="alimento").filtro__boton.-Boton Alimento
+      a(href="#", categoria="suplemento").filtro__boton.-Boton Suplemento
+      a(href="#", categoria="decoracion").filtro__boton.-Boton Decoracion
+      a(href="#", categoria="mantenimiento").filtro__boton.-Boton Mantenimiento
+
+    div.contenido.-Padd.-Flex.-Rad.-Shadow
+      for alimento in alimentos
+        a(href="/info_producto/"+alimento.id categoria=alimento.seccion).carta.-Rad.-Shadow._.WOW.animate__animated.animate__zoomIn
+          div
+            img.carta__img(src=alimento.path, alt=alimento.nombre)
+            p.carta__info= alimento.nombre
+
+      for suplemento in suplementos
+        a(href="/info_producto/"+suplemento.id categoria=suplemento.seccion).carta.-Rad.-Shadow._.WOW.animate__animated.animate__zoomIn
+          div
+            img.carta__img(src=suplemento.path, alt=suplemento.nombre)
+            p.carta__info= suplemento.nombre
+
+      for decoracion in decoraciones
+        a(href="/info_producto/"+decoracion.id categoria=decoracion.seccion).carta.-Rad.-Shadow._.WOW.animate__animated.animate__zoomIn
+          div
+            img.carta__img(src=decoracion.path, alt=decoracion.nombre)
+            p.carta__info= decoracion.nombre
+
+      for mantenimiento in mantenimientos
+        a(href="/info_producto/"+mantenimiento.id categoria=mantenimiento.seccion).carta.-Rad.-Shadow._.WOW.animate__animated.animate__zoomIn
+          div
+            img.carta__img(src=mantenimiento.path, alt=mantenimiento.nombre)
+            p.carta__info= mantenimiento.nombre
+
+  script(src="javascript/productos/filtro_productos.js")

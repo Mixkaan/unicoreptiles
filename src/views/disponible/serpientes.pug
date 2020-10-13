@@ -1,0 +1,610 @@
+extends ../layout
+block append config
+
+  -paginaActual = "serpientes"
+  block append
+    link(rel="stylesheet", href="/styles/disponible/animales.css")
+
+block main
+
+  br
+  br
+  div.contenedor
+    for serpiente in animales
+
+      a.carta.-Rad(href="/info_animal/"+serpiente.id).-Shadow
+        div
+          img.animal-img.-Rad(src=serpiente.path, alt=serpiente.nombre, loading="lazy")
+          br
+          br
+          div.info
+            p=serpiente.nombre
+            p=serpiente.fases
+        div.opacidad.-Rad
+          p.-Btn.verMas VER MAS
+
+
+    //NO-DISPONIBLES
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-hgw-fire.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p HGW FIRE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-puma.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p PUMA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-mojave-leopard-spider.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p MOJAVE LOEPARD SPIDER
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-butter-leopard-fire.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BUTTER LEOPARD FIRE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-soulsocker-cristal.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p SOUL SOCKER CRISTAL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-champagne-pastel.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p CHAMPAGNE PASTEL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-pewter-calico-paradox.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p PEWTER CALICO PARADOX
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bp-champagne-pastel-cinnamon.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p CHAMPAGNE PASTEL CINNAMON
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-mojave-leopard-fire.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p MOJAVE LEOPARD FIRE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-banana-champagne.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BANANA CHAMPAGNE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-mojave-pastel.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p MOJAVE PASTEL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-spider-enchi.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p SPIDER ENCHI
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-pastel-butter.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p PASTEL BUTTER
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-ghi.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p GHI JUVENIL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-blade-clown.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BLADE CLOWN
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-bumblebee.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BUMBLEBEE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-candino-albino.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p CANDIDO ALBINO
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-pied.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p PIED
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-quimera-paradox.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p QUIMERA PARADOX
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-sprusso.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p SUPER RUSSO
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-clown.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p CLOWN
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-banana.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BANANA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-banana-cinn.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BANANA CINNAMON
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-banana-pin.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BANANA PINSTRIPE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-blckpastel.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p BLACK PASTEL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-cypress-mojave.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p CYPRESS MOJAVE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-nom.png", alt="" loading="lazy ")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p NOMINAL
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pb-soulsocker.png", alt="" loading="lazy ")
+        br
+        br
+        div.info
+          p PITON BOLA 
+          p SOULSOCKER
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+
+    
+    //BOAS
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bc-albino-sharp.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA COLOMBIANA
+          p ALBINO SHARP
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/b-arcoiris-leu.png", alt="")
+        br
+        br
+        div.info
+          p BOA ARCOIRIS 
+          p LEUSISTICA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bc-motley-vpi.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA COLOMBIANA
+          p MOTLEY VPI
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/b-hogisland.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA
+          p HOG ISLAND
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bc-motley.png", alt="")
+        br
+        br
+        div.info
+          p BOA COLOMBIANA 
+          p MOTLEY
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bc-surinam.png", alt="")
+        br
+        br
+        div.info
+          p BOA COLOMBIANA 
+          p SURINAM
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/b-esmeralda.png", alt="")
+        br
+        br
+        div.info
+          p BOA ESMERALDA
+          p
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bk-albina.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA KENIANA DE ARENA
+          p ALBINA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bk-stripe.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA KENIANA DE ARENA
+          p STRIPE
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/b-roja-dominicana.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA ROJA 
+          p DOMINICANA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/b-amazonica.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA AMAZONICA 
+          p ADULTA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/bk-yellow.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p BOA KENIANA DE ARENA
+          p YELLOW
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+
+    //OTRAS PITONES
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/p-arbol.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON DE ARBOL
+          p LOC. BIACK
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/p-moteado.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON
+          p MOTEADA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pr-purple-phantom.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON RETICULADA
+          p PURPLE PHANTOM
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pr-purple-tiger.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON RETICULADA
+          p PURPLE TIGER
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/ps-brongermai.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON DE SANGRE
+          p ROJA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Sahdow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/ps-negra.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON DE SANGRE
+          p NEGRA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Sahdow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pburm-albino.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BURMES
+          p ALBINO
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Sahdow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pbred-hypo.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON BREDLI
+          p HYPO
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Sahdow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/pr-suntiger-plat.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p PITON RETICULADO
+          p SUNTIGER PLATINUM
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+
+    //COLUBRIDOS
+
+    div.carta.-Rad.-Sahdow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/fcoral-honduras.png", alt="")
+        br
+        br
+        div.info
+          p FALSA CORALILLO 
+          p LOC. HONDURAS
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/fcoral-nelson-albina.png", alt="")
+        br
+        br
+        div.info
+          p FALSA CORALILLO 
+          p NELSON ALBINA
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/serpientes/maicera-red-motley.png", alt="")
+        br
+        br
+        div.info
+          p SERPIENTE MAICERA 
+          p RED MOTLEY
+      div.opacidad.-Rad
+        p.-Btn.alerta FUERA DE STOCK

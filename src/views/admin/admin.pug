@@ -1,0 +1,75 @@
+extends ../layout
+block append config
+
+  -paginaActual = "admin preventas"
+  block append
+    link(rel="stylesheet", href="/styles/admin/admin.css")
+
+block main
+  section.admin-nav
+      div.admin-nav__btn-subir.-Flex
+        a.-Boton(href="/subir_animal") AGREGAR UN ANIMAL
+        a.-boton(href="/subir_producto") AGREGAR UN PRODUCTO
+      div.admin-nav__btn-inicio
+        a.-boton(href="/") REGRESAR AL INICIO
+
+  br
+  br
+  section.tablas
+    section.productos.-Padd
+      h2.titulo PRODUCTOS
+      br
+      table.tabla
+        thead.tabla__titulo
+          tr
+            th ID
+            th NOMBRE
+            th DESCRIPCION
+            th seccion
+            th IMAGEN
+            th ACCIONES
+        tbody.tabla__cuerpo
+          for producto in productos
+            tr
+            tr
+              td= producto.id
+              td= producto.nombre
+              td= producto.descripcion
+              td= producto.seccion
+              td
+                img(src=producto.path)
+              td
+                a.-boton.eliminar(href="/producto/" + producto.id + "/eliminar") ELIMINAR
+
+
+
+    br
+    br
+    section.animales.-Padd
+      h2.titulo ANIMALES
+      br
+      table.tabla
+        thead.tabla__titulo
+          th ID
+          th NOMBRE
+          th DESCRIPCION
+          th SECCION
+          th SEXO
+          th EDAD
+          th IMAGEN
+          th ACCIONES
+        tbody.tabla__cuerpo
+          for animal in animales
+            tr
+            tr
+              td= animal.id
+              td= animal.nombre
+              td= animal.descripcion
+              td= animal.seccion
+              td= animal.sexo
+              td= animal.edad
+              td
+                img(src=animal.path)
+              td
+                a.-boton.eliminar(href="/animal/" + animal.id + "/eliminar") ELIMINAR
+

@@ -1,0 +1,43 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Morph calculator"
+  block append
+    link(rel="stylesheet", href="/styles/morph-calculator.css")
+
+block main
+
+  br
+  section.calculator.-Menu-margen.-Padd2.-Grid
+    div
+      form(action="")
+        label.-Bold-m(for="pogona") POGONA
+        br
+        select#padre1
+          option(value="") elije una fase
+        br
+        br
+        select#padre2
+          option(value="") elije una fase
+        br
+        br
+        input(type="button" value="calcular" onClick="calcularAnimal()").-Btn1
+
+    div.resultado.-Grid
+      ol
+        li#resultadoTxt
+      img(src="", alt="")#resultadoImg
+
+
+
+  //div.popup(onClick="popUp()") click
+    span.popuptexto#Popup oliwis
+  //Con este trozo de codigo puedo invocar un pop-up
+  //
+  //
+  //Y con este llamar a la funcion de codigo JS
+
+
+  //SCRIPTS----SCRIPTS----SCRIPTS----
+  script(src="/javascript/pop-up.js")
+  script(src="/javascript/media/morph-calculator.js")

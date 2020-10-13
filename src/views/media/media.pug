@@ -1,0 +1,33 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Media"
+  block append
+    link(rel="stylesheet", href="/styles/media.css")
+
+block main
+
+  br
+  section.morph_calculator.-Menu-margen.-Col-f7.-Padd2.-Center
+    div.morph_contenedor.-Col-f8.-Padd.-Borde
+      h2.-F-size2 CALCULADOR GENETICO
+      br
+      br
+      p predice tus cruzes mas rapido y mejor con nuestro 
+        |calculador genetico ahora!!
+      br
+      br
+      a.-Btn1(href="/morph-calculator") pruebalo ahora
+
+
+
+  //div.popup(onClick="popUp()") click
+    span.popuptexto#Popup oliwis
+  //Con este trozo de codigo puedo invocar un pop-up
+  //
+  //
+  //Y con este llamar a la funcion de codigo JS
+
+
+  //SCRIPTS----SCRIPTS----SCRIPTS----
+  script(src="/javascript/pop-up.js")

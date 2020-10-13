@@ -1,0 +1,420 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Lagartos"
+  block append
+    link(rel="stylesheet", href="/styles/disponible/animales.css")
+
+block main
+
+  br
+  br
+  div.contenedor
+    for lagarto in animales
+
+      a.carta.-Rad(href="/info_animal/"+lagarto.id).-Shadow
+        div
+          img.animal-img.-Rad(src=lagarto.path, alt=lagarto.nombre loading="lazy")
+          br
+          br
+          div.info
+            p=lagarto.nombre
+            p=lagarto.fases
+        div.opacidad.-Rad
+          p.-Boton.verMas VER MAS
+
+
+    //NO DISPONIBLE
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/p-red-hypo.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p POGONA 
+              p RED HYPO  
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/p-zero.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p POGONA 
+              p ZERO  
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/p-leather.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p POGONA 
+              p LEATHERBACK  
+          div.opacidad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/p-trans.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p POGONA 
+              p TRANSLUCENT  
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/p-orange.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p POGONA 
+              p ORANGE LEATHERBACK  
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+
+    //OTROS LAGARTOS
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/var-ornato.png", alt="" loading="lazy")
+            br
+            br 
+            div.info
+              p VARANO
+              p ORNATO
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/dragon-agua-chino.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p DRAGON DE AGUA CHINO 
+          p 
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/clami.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p CLAMIDOSAURIOS
+          p 
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/ig-roja.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p IGUANA
+          p ROJA
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/ig-albina.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p IGUANA
+          p ALBINA
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/ig-azul.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p IGUANA
+          p AZUL
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/tegu-red.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p TEGU
+          p RED
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/tegu-blackandwhite.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p TEGU
+          p BLACK AND WHITE
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/tegu-blueice.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p TEGU
+          p BLUE ICE
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/mguila.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p MONSTRUO
+          p DE GUILA
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/var-nilo.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p VARANO
+          p DEL NILO
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/var-gargantablanca.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p VARANO
+          p GARGANTA BLANCA
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/var-nilo-a.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p VARANO DEL NILO
+          p ADULTO
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/var-salvator.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p VARANO
+          p SALVATOR
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/var-argus.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p VARANO
+          p ARGUS
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/coco-moreletti.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p COCODRILO
+          p MORELRTTI
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    //CAMALEONES
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-velo-yellow.png", alt="" loading="lazy")
+            br
+            br 
+            div.info
+              p CAMALEON DE VELO
+              p YELLOW
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-pantera-ambilobe.png", alt="" loading="lazy")
+            br
+            br 
+            div.info
+              p CAMALEON PANTERA
+              p LOC. AMBILOBE
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/camaleones.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p CAMALEONES DE VELO 
+              p JUVENILES  
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-parson.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p CAMALEON DE PARSON 
+              p JUVENIL
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-pantera.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p CAMALEON PANTERA 
+              p JUVENIL
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-velo-adulto.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p CAMALEON DE VELO 
+              p ADULTO
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+          div
+            img.animal-img(src="/img/no-disponible/lagartos/c-velo-pied.png", alt="" loading="lazy")
+            br
+            br
+            div.info
+              p CAMALEON DE VELO 
+              p PIED
+          div.opacidad.-Rad
+            p.-Boton.alerta FUERA DE STOCK
+
+
+    //GECKOS
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-lechianus.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO GIGANTE
+          p LECHIANUS
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-spsnow-albino.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO LEOPARDO
+          p SUPER SNOW ALBINO
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-chachoua.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO
+          p CHACHOUA
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-crestado.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO
+          p CRESTADO
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-mack-eclipse.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO LOPARDO
+          p MACK ECLIPSE
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-raptor.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO LOPARDO
+          p RAPTOR
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK
+
+    div.carta.-Rad.-Shadow
+      div
+        img.animal-img(src="/img/no-disponible/lagartos/gko-mack-raptor.png", alt="" loading="lazy")
+        br
+        br
+        div.info
+          p GECKO LOPARDO
+          p MACK RAPTOR
+      div.opacidad.-Rad
+        p.-Boton.alerta FUERA DE STOCK

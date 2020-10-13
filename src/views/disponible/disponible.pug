@@ -1,0 +1,16 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Disponible"
+  block append
+    link(rel="stylesheet", href="/styles/disponible/disponible.css")
+
+block main
+  br
+  section.secciones.-Menu-margen.-Flex.-Padd2.-Rad2
+    a(href="/disponible/lagartos").secciones__animal.-Borde.-Shadow._.WOW.animate__animated.animate__slideInRight
+      img(src="/img/disponible/lagartos.svg", alt="").animal__logo._.WOW.animate__animated.animate__rotateIn
+    a(href="/disponible/serpientes").secciones__animal.-Borde.-Shadow._.WOW.animate__animated.animate__slideInRight
+      img(src="/img/disponible/serpientes.svg", alt="").animal__logo._.WOW.animate__animated.animate__rotateIn
+    a(href="/disponible/tortugas").secciones__animal.-Borde.-Shadow._.WOW.animate__animated.animate__slideInRight
+      img(src="/img/disponible/tortugas.svg", alt="").animal__logo._.WOW.animate__animated.animate__rotateIn

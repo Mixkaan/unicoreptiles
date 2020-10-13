@@ -1,0 +1,18 @@
+extends ../layout
+block append config
+
+  -paginaActual= gracias
+  block append
+    link(rel="stylesheet", href="/styles/compra/hecho.css")
+
+block main
+
+  br
+  section.-Menu-margen.-Padd2
+    div.mensaje.-Flex.-Rad.-Padd
+      h2.-Center ¡¡ GRACIAS POR SU COMPRA!!
+      br
+      p.-Center ponte en contacto con nosotros para verificar tu compra 
+        |y condicionar los pasos de tu envio
+      br
+      a(href="/").regreso.-Boton REGRESAR AL INICIO

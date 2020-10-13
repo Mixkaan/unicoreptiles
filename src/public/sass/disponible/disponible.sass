@@ -1,0 +1,103 @@
+@import "../colores"
+
+.secciones
+  flex-wrap: wrap
+  justify-content: center
+  background-image: url(/img/fondo/fondo-3.png)
+
+  &__animal
+    width: 90%
+    height: 10rem
+    margin: 2rem 0
+    transition: all 2s
+
+    &:nth-child(1n)
+      &:hover
+        background-size: 101%
+        background-position: 50%
+      
+
+    &:nth-child(1)
+      background-size: 100%
+      background-image: url(/img/disponible/lagartos.png)
+      animation-delay: 0.4s
+      &::before
+        content: "LAGARTOS"
+        float: right
+        font-size: 2rem
+        font-weight: 600
+        margin-top: 3.5rem
+        padding-right: 1rem
+        color: $colb
+    &:nth-child(2)
+      background-size: 100%
+      background-image: url(/img/disponible/serpientes.png)
+      animation-delay: 0.8s
+      &::before
+        content: "SERPIENTES"
+        float: right
+        font-size: 2rem
+        font-weight: 600
+        margin-top: 3.5rem
+        padding-right: 1rem
+        color: $colb
+    &:nth-child(3)
+      background-size: 100%
+      background-image: url(/img/disponible/tortugas.png)
+      animation-delay: 1s
+      &::before
+        content: "TORTUGAS"
+        float: right
+        font-size: 2rem
+        font-weight: 600
+        margin-top: 3.5rem
+        padding-right: 1rem
+        color: $colb
+    
+
+.animal__logo
+  width: auto
+  height: 15rem
+  position: absolute
+  margin-top: -2rem
+  margin-left: -4rem
+  &:nth-child(1n)
+    animation-delay: 0.8s
+    
+
+
+@media screen and (max-width: 800px)
+  .secciones
+    flex-wrap: wrap
+    justify-content: center
+    background-image: url(/img/fondo/fondo-3.png)
+
+    &__animal
+      width: 95%
+      height: 8rem
+      margin: 2rem 0
+
+      &:nth-child(1n)
+        background-size: cover
+      &:nth-child(1)
+        background-position: 0% 0%
+      &:nth-child(2)
+        background-position: 50% 0%
+      &:nth-child(3)
+        background-position: 90% 0%
+        
+        &::before
+          content: "LAGARTOS"
+          float: right
+          font-size: 2rem
+          font-weight: 600
+          margin-top: 3.5rem
+          padding-right: 1rem
+          color: $colb
+
+  .animal__logo
+    width: auto
+    height: 5rem
+    position: absolute
+    margin-top: -2rem
+    margin-left: -5%

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "hecho.css",
+	"sources": [
+		"../../sass/compra/hecho.sass",
+		"../../sass/_colores.sass"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,OAAO,AAAC,CACN,gBAAgB,CCAX,OAAS,CDAY,AAE5B,AAAA,QAAQ,AAAC,CACP,MAAM,CAAE,IAAI,CACZ,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,cAAc,CAAE,MAAM,CACtB,gBAAgB,CCDV,OAAS,CDCY,AAE7B,AAAA,EAAE,AAAC,CACD,SAAS,CAAE,IAAI,CAAG,AAEpB,AAAA,QAAQ,AAAC,CACP,UAAU,CAAE,IAAI,CAChB,gBAAgB,CCXX,OAAS,CDWY"
+}

@@ -1,0 +1,127 @@
+extends layout
+block append config
+
+  -paginaActual = "Inicio"
+  block append
+    link(rel="stylesheet", href="/styles/inicio/index.css")
+
+block main
+  br
+  //INICIO-BANN
+  section.bann.-Menu-margen.-Grid.-Padd2
+    img(src="/img/logo.png", alt="").bann__logo._.WOW.animate__animated.animate__fadeInDownBig
+    div.bann__txt.-Center._.WOW.animate__animated.animate__bounce.animate__fadeIn
+      h1 ÚNICO REPTILES
+      H3 Sé diferente, sé original...
+
+
+  //PERFIL-FACEBOOK
+  section.face-perfil.-Padd.-Flex
+    div.face-perfil__plugin
+      //-SCRIPT
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0" nonce="48LZNwxO"></script>
+      //-PLUGIN
+      <div class="fb-page -Borde -Shadow" data-href="https://www.facebook.com/&#xda;nico-Sangre-Fr&#xed;a-2247381735278065/" data-tabs="timeline" data-max-width="500" data-width="300" data-height="120" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/&#xda;nico-Sangre-Fr&#xed;a-2247381735278065/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/&#xda;nico-Sangre-Fr&#xed;a-2247381735278065/">Único Sangre Fría</a></blockquote></div>
+
+    div.face-perfil__txt
+      h3.-Center @Único Sangre Fría
+      <div class="fb-like like" data-href="https://www.facebook.com/%C3%9Anico-Sangre-Fr%C3%ADa-2247381735278065/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+
+
+  //INSTAGRAM
+  div.-Sub  INSTAGRAM
+  section.instagram-plugin.-Padd3
+    script(src='https://apps.elfsight.com/p/platform.js' defer='')
+    div.pluggin.-ShadowRad._.WOW.animate__animated.animate__fadeInRight
+      div.elfsight-app-cf40f51b-f181-4d58-b3ee-af31b8877e2a
+
+
+  //DESTACADO
+  //- div.-Sub LO MAS NUEVO
+  //- section.destacado
+  //-   div.destacado__animales.-Flex
+      //-for(var i = 0; i <=2; i++)
+        a.carta.-Rad.-Shadow._.WOW.animate__animated.animate__rotateInDownRight(href="/animal-info/"+animales[i].id)
+          div
+            img.animal-img.-Rad(src=animales[i].path, alt=animales[i].nombre)
+            br  
+            br
+            div.info
+              p=animales[i].nombre
+              p=animales[i].fases
+          div.opacidad.-Rad
+            p VER MAS
+
+  //SECCION-VETERINARIA
+  //- div.-Sub ÚNICO & VITAL
+  //- section.veterinaria.-Grid
+  //-   div.veterinaria__logo.-Padd
+  //-     img(src="/img/vet/logo.png", alt="vital pets")
+  //-   div.veterinaria__info.-Padd
+  //-     h2.-Center VITAL PETS & ÚNICO REPTILES POR LA SALUD DE TUS BICHOS
+  //-     br
+  //-     p.-Center VITAL PETS & ÚNICO REPTILES ofrecen su servicio de
+  //-       | atencion veterinaria especializada para reptiles y animales no
+  //-       | convencionales.
+
+
+
+  //YOUTUBE
+  div.-Sub YOUTUBE
+  section.youtube.-Padd3
+    div.youtube__txt
+      p.-Center Mira nuestro contenido exclusivo de You Tube, activa la campanita de notificaciones
+        | y no te pierdas nuestros videos
+    <iframe class="youtube__plugin -Borde -Shadow _ WOW animate__animated animate__backInLeft" src="https://www.youtube.com/embed/EcqIx2BQ_yA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  //WHATSAPP
+  div.-Sub GRUPO ÚNICO
+  section.grupo-whats.-Grid.-Padd
+    div.grupo-whats__txt
+      h4 Únete a nuestro grupo de whats y descubre nuestras 
+        |promociones.
+      br
+      h4 Comercializadoras y criadores , es tu oportunidad de crecer 
+        |con nosotros, únete!!
+
+    a(href="https://chat.whatsapp.com/Cs3DuUdB5FGKQGrRGj0Htn")
+      img.grupo-whats__img._.WOW.animate__animated.animate__tada(src="/icon/whatsapp.png", alt="")
+
+
+  //NOSOTROS
+  a(name="nosotros")
+  div.-Sub NOSOTROS
+  section.nosotros.-Padd3
+    div.nosotros__txt.-Borde.-Shadow._.WOW.animate__animated.animate__fadeIn
+      div.-Padd2.-Justify
+        p ÚNICO REPTILES es una comercializadora y PIMVS avalada ante SEMARNAT, 
+          |nuestra especialidad se basa en la crianza de dragón barbudo ademas 
+          |de otras mas variadas especies 
+        br
+        p Nosotros contamos con una extensa variedad de ejemplares 
+          |exóticostanto de reptiles como otros ejemplares. Contamos con 
+          |un estándar de calidad riguroso para nuestros especímenes y 
+          |obviamente, para traerte lo mejor que ofrece el mercado. Ademas 
+          |de esto, utilizamos siempre la mejor alimentacion y ofrecemos el 
+          |mejor servicio y asesoría para tu mayor satisfación.
+        br
+        p Tras nuestro proyecto como ÚNICO REPTILES, hay detrás más de 5 
+          |años que nos respaldan, los cuales hay práctica, sabiduria, 
+          |experiencia el mejor servicio al cliente y el mejor 
+          |posicionamiento en el mercado actual, siendo nosotros tu mejor 
+          |opción, a nivel nacional e internacional.
+        br
+        p Nosotros contamos con productos tanto nacionales como exportaciones 
+          |internacionales principalmente de U.S.A y Europa. Contamos con 
+          |génitca y linajes de criaderos extranjeros de prestigio. Contamos 
+          |con envíos a toda parte de la republica y países aledaños, siempre 
+          |con un buen control y manejo de envios aéreo.
+        p De nuestra parte te garantizamos el mejor trato y servicio tanto para 
+          |ti como para tu reptil, asi como asesoramiento depor vida y los 
+          |mejores precios.
+        br
+
+
+  script(src="/javascript/parallax.js")
