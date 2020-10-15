@@ -7,7 +7,7 @@ const Producto = require('../models/Producto');
 const Animal = require('../models/Animal');
 
 //STRIPE
-const stripe = require('stripe')('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');
+const stripe = require('stripe')('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');
 
 //PROCESO DE COMPRA DE UN PRODUCTO
 router.post('/compra/producto/:id', async(req, res) => {
