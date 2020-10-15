@@ -7,7 +7,7 @@ const Producto = require('../models/Producto');
 const Animal = require('../models/Animal');
 
 //STRIPE
-const stripe = require('stripe')('sk_test_fu8TvMKyKO8k1PPajqhOezsV00bgGfrfC5');
+const stripe = require('stripe')('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');
 
 //PROCESO DE COMPRA DE UN PRODUCTO
 router.post('/compra/producto/:id', async(req, res) => {
