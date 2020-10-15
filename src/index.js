@@ -43,7 +43,7 @@ app.use(session({
 }));
 
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
+
 app.use(express.json());
 const storage = multer.diskStorage({
   destination: path.join(__dirname,'public/img/uploads'),
@@ -51,9 +51,9 @@ const storage = multer.diskStorage({
     cb(null, uuidv4() + path.extname(file.originalname));
   }
 });
-app.use(multer({
-  storage
-}).single('imagen'));
+app.use(multer({storage}).single('imagen'));
+
+app.use(express.urlencoded({extended: false}));
 
 app.use(bodyParser.json());
 
