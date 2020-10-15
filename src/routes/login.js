@@ -20,7 +20,7 @@ router.use(passport.initialize());
 router.use(passport.session());
 passport.use(new PassportLocal(function(
   username, password, done) {
-  if(username === 'Unicoreptiles' && password === 'Unicoreptiles123')
+  if(username === 'unicoreptiles' && password === 'unicoreptiles123')
     return done(null,{id: 1, name: 'Leo'});
   done(null, false);
 }));
