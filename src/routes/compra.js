@@ -26,7 +26,7 @@ router.post('/compra/producto/:id', async(req, res) => {
     description: producto.descripcion
   })
   console.log(charge.id)
-  res.redirect('/animal/hecho/'+producto.id);
+  res.redirect('/producto/hecho/'+producto.id);
 });
 
 //PROCESO DE COMPRA DE UN ANIMAL
