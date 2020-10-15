@@ -10,9 +10,9 @@ const PassportLocal = require('passport-local').Strategy;
 
 
 
-router.use(cookieParser('unicoReptiles'));
+router.use(cookieParser('ola'));
 router.use(session({
-  secret: 'unicoReptiles',
+  secret: 'ola',
   resave: true,
   saveUninitialized: true,
 }));
@@ -20,7 +20,7 @@ router.use(passport.initialize());
 router.use(passport.session());
 passport.use(new PassportLocal(function(
   username, password, done) {
-  if(username === 'unicoreptiles' && password === 'unicoreptiles123')
+  if(username === 'ola' && password === 'ola123')
     return done(null,{id: 1, name: 'Leo'});
   done(null, false);
 }));
