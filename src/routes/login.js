@@ -10,9 +10,9 @@ const PassportLocal = require('passport-local').Strategy;
 
 
 
-router.use(cookieParser('unicoReptiles'));
+router.use(cookieParser('ola'));
 router.use(session({
-  secret: 'unicoReptiles',
+  secret: 'ola',
   resave: true,
   saveUninitialized: true,
 }));
