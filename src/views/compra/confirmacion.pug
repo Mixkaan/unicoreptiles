@@ -1,0 +1,19 @@
+extends ../layout
+block append config
+
+  -paginaActual = "Todos Los Animales"
+  block append
+    link(rel="stylesheet", href="/styles/compra/compra.css")
+    //stripe
+    script(src='https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch')
+    script(src='https://js.stripe.com/v3/')
+
+
+block main
+
+  br
+  br
+  br
+  br
+
+  p ola

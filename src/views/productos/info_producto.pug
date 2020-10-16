@@ -27,14 +27,21 @@ block main
         br
         br
         //aqui va el boton de stripe
-        form(action='/compra/producto/'+(producto.id) method='POST')
-          script.stripe-button(
-            src='https://checkout.stripe.com/checkout.js' 
-            data-key='pk_live_51Gh63uGxBmPXpdx9n10vG8MwM4YGDfuq0H20t2K6nncxaEhtXLk2Q8tIMuESDHk9HIlGsgHpJS324ZKJUNajzeit00Tqndq1ck'
-            data-amount= (producto.precio*100)
-            data-name='ÚNICO REPTILES'
-            data-description=(producto.descripcion)
-            data-image='/img/logo.png'
-            data-locale='auto'
-            data-currency='mxn'
-          )
+        a(href="/compra") comprar
+        //- form(action='/compra/producto/'+(producto.id) method='POST')
+        //-   script.stripe-button(
+        //-     src='https://checkout.stripe.com/checkout.js' 
+        //-     data-key='pk_live_51Gh63uGxBmPXpdx9n10vG8MwM4YGDfuq0H20t2K6nncxaEhtXLk2Q8tIMuESDHk9HIlGsgHpJS324ZKJUNajzeit00Tqndq1ck'
+        //-     data-amount= (producto.precio*100)
+        //-     data-name='ÚNICO REPTILES'
+        //-     data-description=(producto.descripcion)
+        //-     data-image='/img/logo.png'
+        //-     data-locale='auto'
+        //-     data-currency='mxn'
+          //- )
+        //- #details
+        //-   input#cardholder-name(type='text' placeholder='Cardholder name')
+        //-   // placeholder for Elements
+        //-   form#payment-form
+        //-     #card-element
+        //-     button#card-button Next
