@@ -34,13 +34,13 @@ app.use(require('node-sass-middleware')({
 }));
 
 //MIDDLEWARES
-app.set('trust proxy', 1)
-app.use(session({
-  secret: 'unico-reptiles-app',
-  resave: true,
-  saveUnitialized: true,
-  cookie: { secure: true }
-}));
+// app.set('trust proxy', 1)
+// app.use(session({
+//   secret: 'unico-reptiles-app',
+//   resave: true,
+//   saveUnitialized: true,
+//   cookie: { secure: true }
+// }));
 
 app.use(morgan('dev'));
 

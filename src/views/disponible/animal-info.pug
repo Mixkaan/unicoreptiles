@@ -30,7 +30,7 @@ block main
         form(action='/compra/animal/'+(animal.id) method='POST')
           script.stripe-button(
             src='https://checkout.stripe.com/checkout.js' 
-            data-key='pk_test_vszwAbDx8zPg1AZrZn6Ec4Lr00i0d7OeHj'
+            data-key='pk_live_51Gh63uGxBmPXpdx9n10vG8MwM4YGDfuq0H20t2K6nncxaEhtXLk2Q8tIMuESDHk9HIlGsgHpJS324ZKJUNajzeit00Tqndq1ck'
             data-amount= (animal.precio*100)
             data-name='ÚNICO REPTILES'
             data-description=(animal.descripcion)
